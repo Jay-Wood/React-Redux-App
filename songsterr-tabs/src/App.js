@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import PlayerList from "./components/PlayerList";
 
 function App() {
   return (
@@ -8,8 +9,7 @@ function App() {
         <h1>Find NBA Stats!</h1> 
       </header>
       <div >
-         <p>Player/stats List here</p> 
-         <p> Maybe filters/search functionality</p> 
+        <PlayerList />
       </div>
     </div>
   );
