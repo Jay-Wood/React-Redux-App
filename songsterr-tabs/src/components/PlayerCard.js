@@ -5,8 +5,13 @@ const Player = props => {
     <div className="player-card">      
       <h3>{props.firstname} {props.lastname}</h3>
       <h4>Position: {props.position}</h4>
-      <p>Height: {props.heightfeet}' {props.heightinches}"</p>
-      <p>Weight: {props.weight}</p>
+      {(props.heightfeet && props.heightinches) ? (
+      <p>Height: {props.heightfeet}' {props.heightinches}" </p>) :
+      <p> Height not listed </p>}
+      {props.weight ? ( 
+        <p>Weight: {props.weight}</p>
+      ) : 
+      <p>Weight not listed</p>}
     </div>
   );
 };

@@ -12,27 +12,30 @@ const PlayerList = props => {
             <h2>Welcome to NBA Player Stats, playa!</h2>
             <button onClick={props.getPlayerData}>
                 {props.isLoading ? (
-                <Loader 
+                  <Loader 
                     type="tailspin"
                     color="#00BFFF"
                     height="100"
                     width="100"
                 /> ) : (
-                    "Get Player Data"
+                  "Get Player Data"
                 )}
             </button>
-            {props.players && 
-              props.players.map(player => 
-                <PlayerCard 
-                  key={player.id}
-                  firstname={player.first_name}
-                  lastname={player.last_name}
-                  heightfeet={player.height_feet}
-                  heightinches={player.height_inches}
-                  weight={player.weight_pounts}
-                  position={player.position}  
-                />
-            )}
+            
+            <div className="player-list">
+              {props.players && 
+                props.players.map(player => 
+                  <PlayerCard 
+                    key={player.id}
+                    firstname={player.first_name}
+                    lastname={player.last_name}
+                    heightfeet={player.height_feet}
+                    heightinches={player.height_inches}
+                    weight={player.weight_pounts}
+                    position={player.position}  
+                  />
+              )}
+            </div>
         </>
     )
 }
