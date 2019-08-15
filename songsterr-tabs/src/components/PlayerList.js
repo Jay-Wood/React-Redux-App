@@ -13,7 +13,7 @@ const PlayerList = props => {
             <button onClick={props.getPlayerData}>
                 {props.isLoading ? (
                   <Loader 
-                    type="tailspin"
+                    type="Circles"
                     color="#00BFFF"
                     height="100"
                     width="100"
